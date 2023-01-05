@@ -9,7 +9,7 @@ import (
 )
 
 func Connect() (*gorm.DB, error) {
-	dsn := "root@tcp(127.0.0.1:3306)/movie_web"
+	dsn := "root@tcp(localhost:3306)/movie_web"
 	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
 	if err != nil {
 		fmt.Println("Error DB :::::::: !!!")
